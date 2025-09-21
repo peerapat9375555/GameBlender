@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://dbh23bhhbueew"]
+
+[ext_resource type="Script" uid="uid://bpexqxhdq30bi" path="res://asset/node_3d.gd" id="1_be0f1"]
+[ext_resource type="PackedScene" uid="uid://duxi41hpov0qu" path="res://asset/asd.tscn" id="1_wddbq"]
+[ext_resource type="PackedScene" uid="uid://ckv5crn2sra0a" path="res://asset/Path Straight.glb" id="3_bm0wf"]
+[ext_resource type="PackedScene" uid="uid://b5lmaxjepu3no" path="res://asset/Skyscraper.glb" id="4_vamhd"]
+[ext_resource type="PackedScene" uid="uid://dl77uydkyr2ei" path="res://asset/CAR Model.glb" id="5_4ta1r"]
+[ext_resource type="PackedScene" uid="uid://dusuqmj1q60kx" path="res://asset/Large Building.glb" id="6_b3sbl"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.78028)
+script = ExtResource("1_be0f1")
+
+[node name="Walking" parent="." instance=ExtResource("1_wddbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85242, 0, 0)
+
+[node name="Walking2" parent="." instance=ExtResource("1_wddbq")]
+transform = Transform3D(0.923036, 0, 0.384714, 0, 1, 0, -0.384714, 0, 0.923036, 5.81777, 0.928904, 0)
+
+[node name="Walking3" parent="." instance=ExtResource("1_wddbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7163, 0.665044, 0)
+
+[node name="Walking4" parent="." instance=ExtResource("1_wddbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.74666, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79377, 2.8977, 14.8014)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.993032, 0.114697, -0.0270772, -0.0950025, 0.915058, 0.391974, 0.0697352, -0.38667, 0.919578, 3.64685, 5.41588, 19.0423)
+light_energy = 0.5
+light_indirect_energy = 0.0
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.993032, 0.114697, -0.0270772, -0.0950499, 0.643659, -0.759387, -0.0696705, 0.756669, 0.650076, 3.64685, 5.41588, 19.0423)
+light_energy = 0.5
+light_indirect_energy = 0.0
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.993032, 0.114697, -0.0270772, -0.11726, 0.938668, -0.324272, -0.0117764, 0.325187, 0.945576, 3.64685, 10.7896, 13.5399)
+light_energy = 0.0
+light_indirect_energy = 0.0
+
+[node name="Root Scene" parent="." instance=ExtResource("3_bm0wf")]
+transform = Transform3D(80, 0, 0, 0, 5, 0, 0, 0, 40, 2.28924, -0.183863, -6.60587)
+
+[node name="Skyscraper" parent="." instance=ExtResource("4_vamhd")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 2.38238, 5.9752, -206.159)
+
+[node name="CAR Model" parent="." instance=ExtResource("5_4ta1r")]
+transform = Transform3D(0.00521688, 0, 0.0497271, 0, 0.05, 0, -0.0497271, 0, 0.00521688, -5.92226, 0.0266347, -14.5834)
+
+[node name="Large Building" parent="." instance=ExtResource("6_b3sbl")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 20.2108, -9.53674e-07, -25.415)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.12451, -0.930507, -0.344462, 0.316313, -0.366274, 0.875094, -0.940448, -7.00689e-09, 0.339936, 0, 22.6058, 0)
+light_energy = 4.459
